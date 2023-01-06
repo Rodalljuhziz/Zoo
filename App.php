@@ -1,9 +1,8 @@
 <?php
-namespace app;
+namespace App;
 require __DIR__ . '/vendor/autoload.php';
 
-abstract class Animal
-{
+abstract class Animal{
     private string $name = "";
 
     public function __construct($nameOC)// oc = outside class
@@ -18,11 +17,23 @@ abstract class Animal
 
     public function noise():string
     {
-        return $this->getNoise();
+        return $this->getNoise();   //méthode qui permet d'aller chercher une autre méthode qui définit le bruit dans les php des animaux
     }
 }
 
-$Animaux = [
+interface canSwim{
+
+}
+
+interface canFly{       //les interfaces qui permettent de trier les animaux dans les enclos
+
+}
+
+interface canWalk{
+
+}
+
+$Animals = [
     $joe = new Fish("Joe"),
     $jack= new Fish("Jack"),
     $william = new Fish("William"),
@@ -49,8 +60,10 @@ $Animaux = [
     $peregrin= new Parrot("Peregrin Touque"),
     $francis = new Dove("Francis"),
     $lalanne = new Dove("Lalanne")];
-$value =0 ;
-foreach ($Animaux as &$value){
-    echo $value->getName()."\n";
-    echo $value->noise()."\n";
+
+$monobjet = new Zoo();
+
+foreach ($Animals as $value){
+    $monobjet->addAnimal($value);
 }
+$monobjet->visitTheZoo();
