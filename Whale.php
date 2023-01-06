@@ -1,11 +1,9 @@
 <?php
+namespace app;
 class Whale extends Animal{
 
-    public function noise()
-    {
-        $getNoise() = echo "splash";
-        return $this->getNoise();
+    protected function getNoise():string{
+        return "Splash";
     }
-
 
 }

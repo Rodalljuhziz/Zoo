@@ -1,10 +1,9 @@
 <?php
+namespace app;
 class Dove extends Animal{
 
-    public function noise()
-    {
-        $getNoise() = echo "Rou Rouuu";
-        return $this->getNoise();
+    protected function getNoise():string{
+        return "Rou Rouuuuu";
     }
 
 

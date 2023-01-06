@@ -1,10 +1,9 @@
 <?php
+namespace app;
 class Elephant extends Animal{
 
-    public function noise()
-    {
-        $getNoise() = echo "toooooot";
-        return $this->getNoise();
+    protected function getNoise():string{
+        return "Tooooot";
     }
 
 

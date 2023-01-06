@@ -1,10 +1,9 @@
 <?php
+namespace app;
 class Zebra extends Animal{
 
-    public function noise()
-    {
-        $getNoise() = echo "hiiiiiii";
-        return $this->getNoise();
+    protected function getNoise():string{
+        return "Hiiiiiii";
     }
 
 }
