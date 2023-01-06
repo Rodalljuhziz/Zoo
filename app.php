@@ -1,7 +1,7 @@
 <?php
-
-require __DIR__ . '/vendor/autoload.php';
 namespace app;
+require __DIR__ . '/vendor/autoload.php';
+
 abstract class Animal
 {
     private string $name = "";
@@ -30,7 +30,7 @@ $Animaux = [
     $lucky= new Fish("Lucky Luke"),
     $blip = new BubbleFish("Blip"),
     $blop = new BubbleFish("Blop"),
-    $bloup = new BubbleFish("Bloup"),
+    $bloup = new BubbleFish("Bloup"),  // tout ressamblance avec des personnages connus est fortuit et indépendant de notre volonté
     $felix = new CatFish("Felix the bloop"),
     $kitten = new CatFish("Kitten Mc Kitty"),
     $zappata = new ClownFish("Zappata"),
@@ -49,4 +49,8 @@ $Animaux = [
     $peregrin= new Parrot("Peregrin Touque"),
     $francis = new Dove("Francis"),
     $lalanne = new Dove("Lalanne")];
-;
+$value =0 ;
+foreach ($Animaux as &$value){
+    echo $value->getName()."\n";
+    echo $value->noise()."\n";
+}
